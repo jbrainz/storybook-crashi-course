@@ -10,7 +10,7 @@ import IconClose from "../../../assets/images/icons/x.svg"
 const Icons = {
   bag: IconShoppingBag,
   user: IconUser,
-  Cart: IconShoppingCart,
+  cart: IconShoppingCart,
   close: IconClose,
   plus: IconPlus,
 }
@@ -20,7 +20,7 @@ export const Button = ({ children, href, onClick, variant, icon }) => {
     return (
       <StyledButton onClick={onClick} variant={variant}>
         {icon && <IconButton name={icon} />}
-        {children}
+       {children}
       </StyledButton>
     )
 
@@ -32,7 +32,7 @@ export const Button = ({ children, href, onClick, variant, icon }) => {
   )
 }
 
-const IconButton = ({ name }) => {
+ const IconButton = ({ name }) => {
   if (Icons[name] === undefined) return null
   const Icon = Icons[name]
   return (
